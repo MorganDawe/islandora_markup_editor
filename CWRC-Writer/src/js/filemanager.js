@@ -889,8 +889,8 @@ function FileManager(config) {
 						var tag = w.u.getTagForEditor(w.root);
 						w.editor.setContent('<'+tag+' _tag="'+w.root+'">'+text+'</'+tag+'>');
 					}
-					
 					w.entitiesList.update();
+					
 					w.tree.update(true);
 					w.relations.update();
 					
@@ -977,8 +977,6 @@ function FileManager(config) {
 					break;
 				}
 			}
-			console.log("stylesheet");
-			console.log(stylesheet);
 			if (stylesheet) {
 				try {
 					$('#schemaRules', w.editor.dom.doc).remove();

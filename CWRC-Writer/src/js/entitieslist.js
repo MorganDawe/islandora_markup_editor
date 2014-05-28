@@ -69,6 +69,8 @@ var EntitiesList = function(config) {
 		var entitiesString = '';
 		
 		var entityTags = $('span[class~=start]', w.editor.getBody());
+		console.log("w.entities: ");
+		console.log(w.entities);
 		if (sort == 'category') {
 			var categories = {};
 			entityTags.each(function(index, el) {

@@ -80,6 +80,7 @@ function islandoraBackendDelegate(config) {
   this.loadDocument = function(callback) {
     // So, lets enable read only mode conditionally.
     if (!Drupal.settings.islandora_markup_editor.can_edit) {
+    	console.log("cant edit");
       writer.layout.hide("north");
       // Hide the tinyMCE controll bar.
       $('#editor_toolbargroup').hide();
@@ -90,6 +91,7 @@ function islandoraBackendDelegate(config) {
       async: false,
       dataType: 'xml',
       success: function(doc, status, xhr) {
+       console.log(doc);
         window.location.hash = '#' + PID;
         callback.call(writer, doc);
         // Doing the following anywhere else may
